@@ -6,6 +6,7 @@
   <title>MK Cleaning Services | Your Clean Space, Our Priority</title>
   <meta name="description" content="MK Cleaning Services - Professional, reliable and affordable cleaning solutions for homes, offices, and commercial properties in Gauteng, South Africa." />
   <link rel="stylesheet" href="Style.css" />
+  <link rel="stylesheet" href="chat.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -367,6 +368,51 @@
     </div>
   </footer>
 
+  <!-- ===== CHATBOX ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <button class="chat-toggle" id="chatToggle" aria-label="Open chat">
+    <span class="chat-icon-open">💬</span>
+    <span class="chat-icon-close" style="display:none">✕</span>
+    <span class="chat-notification" id="chatNotif">1</span>
+  </button>
+
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">MK</div>
+        <div>
+          <div class="chat-name">MK Cleaning Services</div>
+          <div class="chat-status"><span class="status-dot"></span> Online — reply within minutes</div>
+        </div>
+      </div>
+      <button class="chat-close-btn" id="chatClose">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-bubble bot">
+        <p>👋 Hi there! Welcome to <strong>MK Cleaning Services</strong>.</p>
+        <p>How can we help you today?</p>
+      </div>
+      <div class="chat-quick-btns" id="quickBtns">
+        <button onclick="quickReply('Get a free quote')">💰 Get a free quote</button>
+        <button onclick="quickReply('Book a cleaning')">📅 Book a cleaning</button>
+        <button onclick="quickReply('What services do you offer?')">🧹 Services</button>
+        <button onclick="quickReply('I need help')">❓ Other</button>
+      </div>
+    </div>
+    <div class="chat-form" id="chatForm">
+      <div class="chat-form-fields" id="chatFields" style="display:none">
+        <input type="text" id="chatName" placeholder="Your name" />
+        <input type="tel" id="chatPhone" placeholder="Your phone number" />
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="Type your message..." autocomplete="off" />
+        <button id="chatSend">➤</button>
+      </div>
+    </div>
+  </div>
+
   <script src="Main.js"></script>
+  <script src="chat.js"></script>
 </body>
 </html>
